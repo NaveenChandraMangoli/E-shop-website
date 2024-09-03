@@ -1,0 +1,18 @@
+.blue{
+    background-color: rgb(65, 65, 202);
+    color: white;
+}
+.nav-item a :hover{
+    color: rgb(201, 41, 41);
+}
+.nav-item .nav-link:active{
+    color: rgb(201, 41, 41);
+}
+
+
+@media(max-width:767px){
+    .navbar-nav .btn{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}

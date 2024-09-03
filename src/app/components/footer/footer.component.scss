@@ -1,0 +1,37 @@
+
+.footer_wrapper {
+    background-color: rgb(169, 164, 164);
+    padding: 20px 0;
+}
+
+.footer_wrapper .social-icon li {
+    margin: 6px;
+}
+
+.footer_wrapper .social-icon a {
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    border-radius: 100%;
+}
+
+.footer_wrapper .social-icon a:hover {
+    background-color: rgb(246, 143, 143);
+    border-color: rgb(239, 78, 78);
+    color: white;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: 0 10px 15px 0 rgb(0 0 0 / 10%);
+    transform: translateY(-3px);
+}
+.footer_wrapper .copyright-text p{
+    font-size:11px;
+    line-height: 20px;
+}
+.footer_wrapper .copyright-text a {
+    color: black;
+}

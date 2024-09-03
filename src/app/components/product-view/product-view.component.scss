@@ -1,0 +1,32 @@
+.detail{
+    width: 500px;
+    height: auto;
+}
+.favorite-button {
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .favorite-button:hover {
+    color: #ff1c1c;
+  }
+
+  .img{
+    width: 250px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+  // Responsive only for Mobile phone device
+@media (max-width:767px){ 
+    .row{
+        overflow-x: hidden;
+    }
+    .detail{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

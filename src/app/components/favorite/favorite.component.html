@@ -1,0 +1,28 @@
+<h2 class="text-center mt-3"><b  class=" text-primary">Favorite Products</b><i class="fa fa-heart text-danger fs-3 ms-2" aria-hidden="true"></i></h2>
+
+<p class="text-center text-danger"><b>Here you can see only your Favorite Products</b></p>
+<hr>
+<div class="container">
+    <div class="row">
+    <!-- Card  -->
+    <div class="col-md-3 mb-3" *ngFor="let product of favoriteProducts">
+        <div class="card">
+            <img src="{{product.image}}" class="card-img-top img mx-auto" alt="product image">
+            <div class="card-body">
+                <h4 class="card-title">{{product.name}}</h4>
+                <div>
+                    <span class="text-success me-3"><b>Rs. {{product.cur_price}}</b></span>
+                    <span class="text-danger" style="text-decoration: line-through;">Rs. {{product.dis_price}}</span>
+                </div>
+                <div class="d-flex">
+                    <a class="view-button  mt-1 fs-3 me-3" (click)="viewProduct(product.id)" ><span class="material-symbols-outlined">visibility</span></a>
+                    <a class="btn cart-button  fs-3" (click)="addToCart(product)"><span class="material-symbols-outlined">add_shopping_cart</span></a>
+                    <a class=" btn fs-3 remove-button " (click)="removeFromFavorites(product)"><span class="material-symbols-outlined">delete</span></a>
+                    <a class=" btn fs-3 remove-button pb-3" (click)="removeFromFavorites(product)"><i class="fa fa-heart text-danger ms-auto fs-4" aria-hidden="true"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

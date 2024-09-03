@@ -1,0 +1,34 @@
+.img{
+    width: 250px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+  .remove-button {
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .remove-button:hover {
+    color: #ff1c1c;
+  }
+
+  .view-button {
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .view-button:hover {
+    color: blue;
+  }
+
+.cart-button {
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .cart-button:hover {
+    color: rgb(245, 245, 71);
+  }

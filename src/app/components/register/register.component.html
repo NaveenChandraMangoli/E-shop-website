@@ -1,0 +1,125 @@
+<div class="container mt-5">
+  <h1 class="text-center">Registeration Form</h1>
+  <hr>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="mb-3">
+      <label>Username</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="fa fa-user"></i></span>
+        <input type="text" formControlName="username" class="form-control">
+      </div>
+      <div *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched" class="text-danger">
+        Username must be at least 4 characters long.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Email</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+        <input type="email" formControlName="email" class="form-control">
+      </div>
+      <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="text-danger">
+        Enter a valid email.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Password</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="fa fa-lock"></i></span>
+        <input [type]="hidePassword ? 'password' : 'text'" formControlName="password" class="form-control">
+        <span class="input-group-text" (click)="hidePassword = !hidePassword">
+          <i class="fa" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash'"></i>
+        </span>
+      </div>
+      <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="text-danger">
+        Password must be at least 6 characters long.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="registerForm.invalid">Register</button>
+    <a routerLink="/login" type="submit" class="text-primary account ms-2">Log-in here?</a>
+  </form>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!--
+<div class="container ">
+    <div class="row">
+        <h1 class="text-center mt-2">Registeration Form</h1>
+        <div class="col-8 mx-auto ">
+            <form>
+                <div class="mb-3">
+                  <label class="form-label">User Name</label>
+                  <input type="text"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Password</label>
+                  <input type="password"  name="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-success me-2">Submit</button>
+                <a routerLink="/login" type="submit" class="text-primary account me-2">Log-in here?</a>
+                <a routerLink="/"><button type="button" class="btn btn-outline-danger  rounded-circle mx-3"><span class="material-symbols-outlined">undo</span></button></a>
+              </form>
+        </div>
+    </div>
+</div>
+
+<h2>Register</h2>
+<form (ngSubmit)="register()">
+  <label>Username</label>
+  <input type="text" [(ngModel)]="username" name="username" required>
+  
+  <label>Email</label>
+  <input type="email" [(ngModel)]="email" name="email" required>
+  
+  <label>Password</label>
+  <input type="password" [(ngModel)]="password" name="password" required>
+  
+  <button type="submit">Register</button>
+</form>
+-->

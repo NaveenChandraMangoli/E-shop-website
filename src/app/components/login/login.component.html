@@ -1,0 +1,82 @@
+<div class="container mt-5">
+  <h1 class="text-center">Log-in Form</h1>
+  <hr>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="mb-3">
+      <label>Username</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="fa fa-user"></i></span>
+        <input type="text" formControlName="username" class="form-control">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Password</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="fa fa-lock"></i></span>
+        <input [type]="hidePassword ? 'password' : 'text'" formControlName="password" class="form-control">
+        <span class="input-group-text" (click)="hidePassword = !hidePassword">
+          <i class="fa" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash'"></i>
+        </span>
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Login</button>
+    <a routerLink="/register" type="submit" class="text-primary account ms-3">register here?</a>
+
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="container ">
+    <div class="row">
+        <h1 class="text-center mt-2">Log-in Form</h1>
+        <div class="col-8 mx-auto ">
+            <form >
+                <div class="mb-3">
+                  <label class="form-label">User Name</label>
+                  <input type="email" type="text"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-success me-2">Log-in</button>
+                <a routerLink="/register" type="submit" class="text-primary account me-2">Create new account?</a>
+                <a routerLink="/"><button type="button" class="btn btn-outline-danger  rounded-circle mx-3"><span class="material-symbols-outlined">undo</span></button></a>
+
+              </form>
+        </div>
+    </div>
+</div>
+
+<h2>Login</h2>
+<form (ngSubmit)="login()">
+  <label>Username</label>
+  <input type="text" [(ngModel)]="username" name="username" required>
+  
+  <label>Password</label>
+  <input type="password" [(ngModel)]="password" name="password" required>
+  
+  <button type="submit">Login</button>
+</form>
+-->

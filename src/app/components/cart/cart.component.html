@@ -1,0 +1,48 @@
+<!--
+  <h1 class="text-center mt-3 text-warning">Cart Items</h1>
+  <hr>
+<div>
+<div *ngFor="let item of cartItems; let i = index" class="cart-item">
+  <div class="item-info">
+    <img [src]="item.image" alt="" class="item-image">
+    <div class="item-details">
+      <h3>{{ item.name }}</h3>
+      <p>Price: {{ item.cur_price }}</p>
+    </div>
+  </div>
+  <a class="border-0 .p-0 btn fs-5 remove-button" (click)="removeItem(i)"><span class="material-symbols-outlined">delete</span></a>
+</div>
+<div class="mt-5 me-5">
+  <a routerLink="/product"><button type="button" class="btn btn-outline-danger  rounded-circle mx-3"><span class="material-symbols-outlined">undo</span></button></a>
+</div>
+</div>
+-->
+
+<h2 class="text-center mt-3 text-warning"><b>Cart Items</b> <span class="material-symbols-outlined text-success ms-2 fs-3 mt-2"><b>shopping_cart_checkout</b></span></h2>
+<p class="text-center text-danger"><b>Here you can see your add to cart product</b></p>
+<hr>
+
+<div *ngFor="let item of cartItems; let i = index" class="cart-item">
+  <div class="item-info">
+    <img [src]="item.image" alt="{{ item.name }}" class="item-image">
+    <div class="item-details">
+      <h3>{{ item.name }}</h3>
+      <p>Price: {{ item.cur_price }}</p>
+      <div class="quantity-control">
+        <a class="border-0 .p-0 btn fs-5 remove-button" (click)="decreaseQuantity(i)"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
+        <span>{{ item.quantity }}</span>
+        <a class="border-0 .p-0 btn fs-5 increase-button" (click)="increaseQuantity(i)"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+  <a class="border-0 .p-0 btn fs-5 remove-button" (click)="removeItem(i)"><span class="material-symbols-outlined">delete</span></a>
+</div>
+
+<hr>
+<h3 class="text-center"><b class="text-success">Total Price </b> <i class="fa fa-arrow-right" aria-hidden="true"></i> {{ totalPrice | currency: 'INR': 'symbol' }}</h3>
+<button class="btn btn-outline-warning border-2 p-2 mx-auto rounded-pill d-flex justify-content-center"><b>Pay Bill</b></button>
+
+<div class="mt-5 me-5 text-end">
+  <a routerLink="/product"><button type="button" class="btn btn-outline-danger  rounded-circle mx-3"><span class="material-symbols-outlined">undo</span></button></a>
+</div>
+

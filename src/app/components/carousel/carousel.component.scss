@@ -1,0 +1,65 @@
+.home .home-banner-1,
+.home .home-banner-2{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90% center;
+    min-height: 650px;
+    position:relative;
+} 
+.home .home-banner-1{
+    background-image:url('./assets/slide1.jpg');
+}
+.home .home-banner-2{
+    background-image:url('./assets/slide2.jpg');
+}
+.home .home-banner .home-banner-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-110%, -50%)
+}
+.home .home-banner .home-banner-text h1{
+    font-size: 89px;
+}
+.home .carousel-indicators [data-bs-target]{
+    background-color:red;
+    width:2.5rem;
+    height:8pxrem;
+}
+.home .carousel-control-next-icon,
+.home .carousel-control-prev-icon{
+    background: transparent;
+}
+.home .slider-icon{
+    font-size: 40px;
+    font-weight: 600;
+    color:red;
+}
+
+
+// Responsive only for Mobile phone device
+@media (max-width:767px){ 
+
+    .home .home-banner-1,
+    .home .home-banner-2{
+        background-position:50% center;
+        min-height: 450px;
+    }
+    .home .home-banner .home-banner-text{
+        text-align: center;
+        width:100%;
+        transform:translate(-50%, -50%);
+    }
+    .home .home-banner .home-banner-text h1{
+        font-size: 30px;
+    }
+    .home .home-banner .home-banner-text h2{
+        font-size: 12px;
+    }
+    .home .home-banner .home-banner-text .btn-danger{
+        padding:0.5rem 15px;
+    }
+    .home .slider-icon{
+        font-size: 20px;
+    } 
+}

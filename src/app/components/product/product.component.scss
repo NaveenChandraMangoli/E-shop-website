@@ -1,0 +1,40 @@
+.img{
+    width: 250px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.favorite-button {
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .favorite-button:hover {
+    color: #ff1c1c;
+  }
+  
+.view-button {
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .view-button:hover {
+    color: blue;
+  }
+
+.cart-button {
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .cart-button:hover {
+    color: rgb(245, 245, 71);
+  }
+  
+
+// Responsive only for Mobile phone device
+@media (max-width:767px){ 
+ 
+}
